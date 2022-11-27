@@ -20,13 +20,16 @@ test('Title shows up when page loads', async () => {
 })
 
 test ('bots are displayed when draw button is clicked', async () => {
-    await driver.findElement(By.xpath('/html/body/button[2]')).click()
+    await driver.findElement(By.id('draw')).click()
 
-    const bots = await driver.findElement(By.xpath('/html/body/section[1]/div'))
+    await driver.sleep(3000)
+
+    const bots = await driver.findElement(By.id('choices'))
 
     const displayed = await bots.isDisplayed()
 
-    expect(displayed).toBeTruthy()
+    expect(displayed).toBe(true)
 
     await driver.sleep(3000)
 })
+

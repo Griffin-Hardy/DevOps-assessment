@@ -118,7 +118,7 @@ const putBotBack = (id) => {
 }
 
 const drawFive = () => {
-    axios.get('http://ec2-18-246-44-216.us-west-2.compute.amazonaws.com/api/five')
+    axios.get('http://ec2-18-246-44-216.us-west-2.compute.amazonaws.com/api/robots/five')
         .then(res => {
             choices = res.data.choices
             compDuo = res.data.compDuo
