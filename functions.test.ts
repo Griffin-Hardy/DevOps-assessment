@@ -6,7 +6,7 @@ describe('shuffleArray should', () => {
     })
 
     test('should shuffle array of items', () => {
-        let myArray = [1,2,3]
+        let myArray = [1,2,3,4,5,6]
         let result = shuffleArray(myArray)
 
         expect(result.join()).not.toEqual(myArray.join())
